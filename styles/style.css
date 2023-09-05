@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;600;700&display=swap');
+
+/* font-family: 'Ruwudu', serif;
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Ruwudu', serif;
+  overflow: hidden;
+  background-color: #32323200;
+}
+
+header {
+  background-color: cornsilk;
+  margin: 0;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 150px; */
+  text-align: center;
+  border-bottom: 0.5rem solid tomato;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1 span {
+  color: tomato;
+  text-decoration: underline;
+}
+
+aside {
+  display: none;
+}
+
+#game-configuration {
+  width: 100%;
+  border: 1px solid tomato;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#game-configuration ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  width: 100vh;
+}
+
+#game-configuration ul li {
+  /* width: 50%; */
+  background-color: cornsilk;
+  margin: 1rem;
+  padding: 1rem 0;
+  width: 300px;
+}
+
+#game-configuration button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(248, 170, 157);
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+#active-game {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  width: 100%;
+  grid-gap: 0.5rem 0.5rem;
+  column-gap: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  background-color: cornsilk;
+  /* margin-right: 1rem; */
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.square:hover {
+  background-color: tomato;
+}

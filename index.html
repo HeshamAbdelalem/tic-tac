@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>لعبة X O</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        لعبة تيك تاك مع <span>روكا</span> الجميلة و<span>بودي</span> العسل
+      </h1>
+    </header>
+
+    <main>
+      <aside>
+        <h2>Choose Your Name:</h2>
+        <form>
+          <div>
+            <label for="">Player Name</label>
+            <input type="text" name="playername" id="playerName" />
+          </div>
+          <button></button>
+        </form>
+      </aside>
+      <section id="game-configuration">
+        <ul>
+          <li>
+            <div class="player1">
+              <h3>اللاعب الأول</h3>
+              <h2>بودي</h2>
+              <p>X</p>
+              <button>Edit</button>
+            </div>
+          </li>
+          <li>
+            <div class="player2">
+              <h3>اللاعب الثاني</h3>
+              <h2>روكا</h2>
+              <p>O</p>
+              <button>Edit</button>
+            </div>
+          </li>
+        </ul>
+        <button>Start New Game</button>
+      </section>
+
+      <section id="active-game">
+        <p>الدور على : روكا</p>
+        <div class="game">
+          <section class="square item1">1</section>
+          <section class="square item2">2</section>
+          <section class="square item3">3</section>
+          <section class="square item4">4</section>
+          <section class="square item5">5</section>
+          <section class="square item6">6</section>
+          <section class="square item7">7</section>
+          <section class="square item8">8</section>
+          <section class="square item9">9</section>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
