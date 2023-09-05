@@ -30,30 +30,32 @@
         </form>
       </aside>
       <section id="game-configuration">
-        <ul>
-          <li>
-            <div class="player1">
-              <h3>اللاعب الثاني</h3>
-              <h2 contenteditable="true" class="player2Name">بودي</h2>
-              <p>O</p>
-              <button class="btn btn-warning">تعديل الأسم</button>
-            </div>
-          </li>
-          <li>
-            <div class="player2">
-              <h3>اللاعب الأول</h3>
-              <h2 contenteditable="true" class="player1Name">روكا</h2>
-              <p>X</p>
-              <button class="btn btn-warning">تعديل الأسم</button>
-            </div>
-          </li>
+        <ul class="container mx-auto align-items-center">
+          <div class="row justify-content-center">
+            <li class="col-md-6">
+              <div class="player1">
+                <h3>اللاعب الثاني</h3>
+                <h2 contenteditable="true" class="player2Name">بودي</h2>
+                <p>O</p>
+                <button class="btn btn-warning">تعديل الأسم</button>
+              </div>
+            </li>
+            <li class="col-md-6">
+              <div class="player2">
+                <h3>اللاعب الأول</h3>
+                <h2 contenteditable="true" class="player1Name">روكا</h2>
+                <p>X</p>
+                <button class="btn btn-warning">تعديل الأسم</button>
+              </div>
+            </li>
+          </div>
         </ul>
         <button class="btn btn-danger reset">أبدا لعبة جديدة</button>
       </section>
 
       <section id="active-game">
         <h3>الدور على : <span class="name-span"></span></h3>
-        <div class="game">
+        <div class="game container mb-2 my-2">
           <section class="square item1"></section>
           <section class="square item2"></section>
           <section class="square item3"></section>

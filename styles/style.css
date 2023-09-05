@@ -13,19 +13,21 @@ body {
   /* overflow: hidden; */
   height: 100%;
   width: 100%;
-  background-color: #32323200;
   background-color: #ffdee9;
+  background-repeat: no-repeat;
   background-image: linear-gradient(0deg, #ffdee9b4 0%, #b5fffd94 100%);
 }
 
 header {
   background-color: cornsilk;
-  margin: 0;
+  margin: 0 auto;
   padding: 1.5rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   /* height: 150px; */
+
   text-align: center;
   border-bottom: 0.25rem solid tomato;
 }
@@ -54,11 +56,11 @@ aside {
 }
 
 #game-configuration ul {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  /* justify-content: space-around; */
   list-style: none;
-  align-items: center;
-  width: 100vh;
+  /* align-items: center; */
+  /* width: 100vh; */
 }
 
 #game-configuration ul li {
