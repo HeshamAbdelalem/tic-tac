@@ -11,7 +11,8 @@
 body {
   font-family: 'Ruwudu', serif;
   /* overflow: hidden; */
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   background-color: #32323200;
   background-color: #ffdee9;
   background-image: linear-gradient(0deg, #ffdee9b4 0%, #b5fffd94 100%);
