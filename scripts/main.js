@@ -81,6 +81,8 @@ squares.forEach((el) => {
       turn = 'o';
       playerTurn.textContent = '  ' + player2Name.textContent;
       playerTurn.style.color = 'blue';
+      if (winnerMsg.classList.contains('winner-h3'))
+        playerTurn.textContent = '';
 
       checkWinner();
     } else if (turn === 'o' && el.innerHTML == '') {
@@ -88,6 +90,8 @@ squares.forEach((el) => {
       turn = 'x';
       playerTurn.textContent = '  ' + player1Name.textContent;
       playerTurn.style.color = 'crimson';
+      if (winnerMsg.classList.contains('winner-h3'))
+        playerTurn.textContent = '';
 
       checkWinner();
     }
