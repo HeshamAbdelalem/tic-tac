@@ -2,7 +2,7 @@ let squares = document.querySelectorAll('.square');
 let turn = 'x';
 let player1Name = document.querySelector('.player1Name');
 let player2Name = document.querySelector('.player2Name');
-let playerTurn = document.querySelector('#active-game h3  span');
+let playerTurn = document.querySelector('#active-game  span');
 let winnerMsg = document.querySelector('#active-game h3');
 let headerName1 = document.querySelector('header .headerName1');
 let headerName2 = document.querySelector('header .headerName2');
@@ -22,12 +22,14 @@ function checkCells(cell1, cell2, cell3) {
       'الفائز هو : ' + headerName1.textContent;
     document.querySelector('#active-game h3').classList.add('winner-h3');
     // document.querySelector('#active-game h3').style.color = 'red';
+    playerTurn.textContent = '';
     console.log('X wins');
   } else if (squares[cell1].textContent == 'O') {
     document.querySelector('#active-game h3').textContent =
       'الفائز هو : ' + headerName2.textContent;
     document.querySelector('#active-game h3').classList.add('winner-h3');
     // document.querySelector('#active-game h3').style.color = 'red';
+
     console.log('O wins');
   }
   console.log(
@@ -35,16 +37,6 @@ function checkCells(cell1, cell2, cell3) {
     squares[cell2].textContent,
     squares[cell3].textContent
   );
-}
-
-function resetGame() {
-  for (let i = 0; i < squares.length; i++) {
-    squares[i].textContent = '';
-  }
-  document.querySelector('#active-game').textContent = headerName1.textContent;
-  turn = 'x';
-
-  location.reload();
 }
 
 function checkWinner() {
@@ -87,14 +79,14 @@ squares.forEach((el) => {
     if (turn === 'x' && el.innerHTML == '') {
       el.textContent = 'X';
       turn = 'o';
-      playerTurn.textContent = player2Name.textContent;
+      playerTurn.textContent = '  ' + player2Name.textContent;
       playerTurn.style.color = 'blue';
 
       checkWinner();
     } else if (turn === 'o' && el.innerHTML == '') {
       el.textContent = 'O';
       turn = 'x';
-      playerTurn.textContent = player1Name.textContent;
+      playerTurn.textContent = '  ' + player1Name.textContent;
       playerTurn.style.color = 'crimson';
 
       checkWinner();
@@ -102,4 +94,43 @@ squares.forEach((el) => {
   });
 });
 
-reset.addEventListener('click', resetGame);
+reset.addEventListener('click', () => {
+  for (let i = 0; i < squares.length; i++) {
+    console.log((squares[i].textContent = ''));
+  }
+
+  document.querySelector('#active-game h3').textContent =
+    ' : ' + headerName1.textContent;
+  document.querySelector('#active-game h3').classList.remove('winner-h3');
+
+  squares.forEach((el) => {
+    el.classList.remove('winner-squares');
+  });
+  turn = 'x';
+  winnerMsg.textContent = `الدور على ${
+    document.querySelector('.name-span').textContent
+  }`;
+
+  // document.querySelector('#active-game h3').style.color = 'red';
+  // console.log('X wins');
+
+  // document.querySelector('#active-game h3').style.color = 'red';
+  // console.log('O wins');
+
+  // document.querySelector('#active-game').textContent = headerName1.textContent;
+});
+
+function resetGame() {
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].textContent = '';
+    console.log(
+      document.querySelector('#active-game h3').classList.add('winner-h3')
+    );
+  }
+  // document.querySelector('#active-game').textContent = headerName1.textContent;
+  // turn = 'x';
+
+  winnerMsg.textContent = `turn ${player1Name}`;
+
+  // location.reload();
+}

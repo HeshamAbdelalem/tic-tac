@@ -147,3 +147,9 @@ aside {
 .reset {
   font-size: 1.2rem;
 }
+
+.name-span {
+  display: inline;
+  padding-right: 0.5rem;
+  font-size: 2rem;
+}
